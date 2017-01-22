@@ -7,19 +7,22 @@
 //
 
 #import "ViewController.h"
-#import "MessageSender.h"
+#import "LoggerWatcher.h"
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    LoggerWatcher *logger;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [MessageSender new];
+    logger = [[LoggerWatcher alloc] init];
+    [logger startTracking:@"1" withKey:@"key1" withChannel:@"channel1"];
 }
 
 
@@ -28,5 +31,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onRegister:(id)sender {
+    [logger trackRegistration:@"user1"];
+}
+- (IBAction)onLogin:(id)sender {
+    [logger trackLogin:@"user1"];
+}
+- (IBAction)onPayment:(id)sender {
+    [logger trackPurchase:@"user1" order:@"order1" payType:@"alipay" currency:@"CNY" price:@"0.99"];
+}
+- (IBAction)onCustom:(id)sender {
+    [logger trackCustom:@"event1" value:@"value1" user:@"user1"];
+}
 
 @end

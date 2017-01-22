@@ -14,6 +14,8 @@
 		1011AFF31E3303DB0095AB46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1011AFF21E3303DB0095AB46 /* Assets.xcassets */; };
 		1011AFF61E3303DC0095AB46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1011AFF41E3303DC0095AB46 /* LaunchScreen.storyboard */; };
 		1011AFFF1E3304490095AB46 /* MessageSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 1011AFFE1E3304490095AB46 /* MessageSender.m */; };
+		10A26FB41E34526B00AC5293 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A26FB31E34526B00AC5293 /* Utility.m */; };
+		10A26FB61E345C6800AC5293 /* LoggerWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A26FB51E345C6800AC5293 /* LoggerWatcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,9 @@
 		1011AFFE1E3304490095AB46 /* MessageSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageSender.m; path = stat/MessageSender.m; sourceTree = "<group>"; };
 		1011B0001E33049E0095AB46 /* MessageSender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MessageSender.h; path = stat/MessageSender.h; sourceTree = "<group>"; };
 		1011B0011E3362440095AB46 /* LoggerWatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoggerWatcher.h; path = stat/LoggerWatcher.h; sourceTree = "<group>"; };
+		10A26FB21E34526B00AC5293 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utility.h; path = stat/Utility.h; sourceTree = "<group>"; };
+		10A26FB31E34526B00AC5293 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utility.m; path = stat/Utility.m; sourceTree = "<group>"; };
+		10A26FB51E345C6800AC5293 /* LoggerWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggerWatcher.m; path = stat/LoggerWatcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,9 @@
 				1011AFFE1E3304490095AB46 /* MessageSender.m */,
 				1011B0001E33049E0095AB46 /* MessageSender.h */,
 				1011B0011E3362440095AB46 /* LoggerWatcher.h */,
+				10A26FB51E345C6800AC5293 /* LoggerWatcher.m */,
+				10A26FB21E34526B00AC5293 /* Utility.h */,
+				10A26FB31E34526B00AC5293 /* Utility.m */,
 			);
 			name = stat;
 			sourceTree = "<group>";
@@ -167,7 +175,9 @@
 			files = (
 				1011AFFF1E3304490095AB46 /* MessageSender.m in Sources */,
 				1011AFEE1E3303DB0095AB46 /* ViewController.m in Sources */,
+				10A26FB41E34526B00AC5293 /* Utility.m in Sources */,
 				1011AFEB1E3303DB0095AB46 /* AppDelegate.m in Sources */,
+				10A26FB61E345C6800AC5293 /* LoggerWatcher.m in Sources */,
 				1011AFE81E3303DB0095AB46 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +333,7 @@
 				1011AFFC1E3303DC0095AB46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

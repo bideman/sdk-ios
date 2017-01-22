@@ -63,8 +63,8 @@
         return;
     }
 
-    NSDictionary *headers = @{ @"accept": @"application/json", @"content-type": @"application/json" };
-    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
+    NSDictionary *headers = @{ @"accept": @"*/*", @"content-type": @"application/json" };
+    NSURL *url = [NSURL URLWithString:@"http://115.28.91.153:8182/sdktest/sdk"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
     if (request == nil) {
         return;
@@ -73,10 +73,12 @@
     [request setAllHTTPHeaderFields:headers];
     [request setHTTPBody:jsondata];
     
+    NSLog(@"%@", [[NSString alloc] initWithData:jsondata encoding:NSUTF8StringEncoding]);
     
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if ([response isKindOfClass: [NSURLResponse class]]) {
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+            NSLog(@"%d%@", httpResponse.statusCode, [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
             if (httpResponse.statusCode != 200) {
                 [threadLock lock];
                 [queue addObject:body];

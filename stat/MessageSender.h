@@ -6,9 +6,6 @@
 //  Copyright © 2017年 osx. All rights reserved.
 //
 
-#ifndef MessageSender_h
-#define MessageSender_h
-
 #import <Foundation/Foundation.h>
 
 @interface MessageSender : NSObject<NSURLSessionDelegate>
@@ -19,4 +16,3 @@
 
 @end
 
-#endif /* MessageSender_h */
